@@ -4,14 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+//lets create another functional component
+function Ok() {
+  return <span >this is related to Frontend </span>
+}
+
+//lets create our first RFC
+function My({ man }) {
+  return (
+    <span className='man'>I am Santosh MERN stack developer {man}<Ok /></span>
+  )
+}
+
+const root = ReactDOM.createRoot(document.getElementById('santosh'));
 root.render(
   <React.StrictMode>
-    <App />
+    <h1>hi Santosh <My man={"santosh chaugule"} /></h1>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+document.getElementById('santosh')
 reportWebVitals();
